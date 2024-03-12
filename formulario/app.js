@@ -1,18 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { Button } from 'react-native';
-import { TextInput } from 'react-native-web';
+import { Picker, TextInput } from 'react-native-web';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
       <View>
-        <Image
-        style={{widht:50, height:50}}
-        source={require()}/>
-      </View>
-      <View>
+        <Text>Dados Pessoais</Text>
       
         <TextInput
         style={styles.input}
@@ -38,6 +34,12 @@ export default function App() {
         keyboardType="numeric"
         />
 
+        </View>
+        <View>
+          <Text>Outras Informações</Text>
+          <Picker style={{height:50,widht:150}}>
+            <Picker.Item label="Programar"/>
+          </Picker>
         </View>
 
     </View>
