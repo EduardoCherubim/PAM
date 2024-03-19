@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Button } from 'react-native';
 import { Picker, TextInput } from 'react-native-web';
 import { Image } from 'react-native-web';
+import { CheckBox } from 'react-native-web';
 
 export default function App() {
   return (
@@ -10,34 +11,35 @@ export default function App() {
       <StatusBar style="auto" />
       <View style={styles.imagem}>
       <Image
-        style={{width:50,height:50}}
-        source={{uri:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fdepositphotos.com%2Fbr%2Fvector%2Fuser-icon-vector-people-icon-profile-vector-icon-person-illustration-business-user-icon-users-group-406452666.html&psig=AOvVaw23fGlUkrf2957B-DPl6sWe&ust=1710872835934000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCLDgoLy4_oQDFQAAAAAdAAAAABAJ"}}
+        style={styles.image}
+        source={require ("../Aula/assets/images/istockphoto-174381856-612x612.jpg")}
       />
+      <Text>Nome do usuário</Text>
       </View>
       <View style={styles.dados}>
         <Text>Dados Pessoais</Text>
       
         <TextInput
         style={styles.input}
-        placeholder="useless placeholder"
+        placeholder="Digite Seu Nome"
         keyboardType="numeric"
         />
 
         <TextInput
         style={styles.input}
-        placeholder="useless placeholder"
+        placeholder="Digite Seu Telefone"
         keyboardType="numeric"
         />
 
         <TextInput
         style={styles.input}
-        placeholder="useless placeholder"
+        placeholder="Digite Seu Endereço"
         keyboardType="numeric"
         />
 
         <TextInput
         style={styles.input}
-        placeholder="useless placeholder"
+        placeholder="Digite Seu E-mail"
         keyboardType="numeric"
         />
 
@@ -47,7 +49,12 @@ export default function App() {
           <Picker style={{height:50,widht:100}}>
             <Picker.Item label="Programar"/>
           </Picker>
+          <CheckBox
+          style={{alignSelf:"center"}}
+          />
+          <Text>1</Text>
         </View>
+
         <View style={styles.textos}>
           <Text>Nome:</Text>
           <Text>Telefone:</Text>
@@ -69,6 +76,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    marginBotton: 15,
   },
   input:{
     width:200,
@@ -76,21 +84,33 @@ const styles = StyleSheet.create({
     borderWidth: 1,
   },
   dados:{
+    borderRadius: 15,
     borderWidth:2,
     width:300,
     height:200,
     padding: 15,
   },
   informacoes:{
+    borderRadius: 15,
     padding:15,
     borderWidth: 2,
     width:300,
     height:100,
   },
   textos:{
+    borderRadius: 15,
     padding:15,
     borderWidth: 2,
     width:300,
     height:150,
+  },
+  imagem:{
+    width:200,
+    height:50,
+  },
+  image:{
+    width:100,
+    height:100,
+    borderRadius:50,
   },
 });
