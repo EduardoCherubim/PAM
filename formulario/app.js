@@ -1,3 +1,4 @@
+
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { Button } from 'react-native';
@@ -12,9 +13,8 @@ export default function App() {
       <View style={styles.imagem}>
       <Image
         style={styles.image}
-        source={require ("../Aula/assets/images/istockphoto-174381856-612x612.jpg")}
+        source={require ("../aplicativo1/assets/images/fotos-secretarios-masculino-1.jpg")}
       />
-      <Text>Nome do usuário</Text>
       </View>
       <View style={styles.dados}>
         <Text>Dados Pessoais</Text>
@@ -49,10 +49,10 @@ export default function App() {
           <Picker style={{height:50,widht:100}}>
             <Picker.Item label="Programar"/>
           </Picker>
+          <Text style={{alignSelf:"center"}}>Aceita os termos de Serviço</Text>
           <CheckBox
-          style={{alignSelf:"center"}}
+          style={{alignSelf:"auto"}}
           />
-          <Text>1</Text>
         </View>
 
         <View style={styles.textos}>
@@ -80,8 +80,8 @@ const styles = StyleSheet.create({
   },
   input:{
     width:200,
-    height:100,
-    borderWidth: 1,
+    height:50,
+    borderWidth: 0.5,
   },
   dados:{
     borderRadius: 15,
@@ -107,6 +107,8 @@ const styles = StyleSheet.create({
   imagem:{
     width:200,
     height:50,
+    justifyContent:"center",
+    alignItems:"center",
   },
   image:{
     width:100,
