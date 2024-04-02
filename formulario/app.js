@@ -1,19 +1,29 @@
 
+
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { Button } from 'react-native';
 import { Picker, TextInput } from 'react-native-web';
 import { Image } from 'react-native-web';
 import { CheckBox } from 'react-native-web';
+import { useState } from 'react';
 
 export default function App() {
+
+  const [nome, setNome] = useState()
+  const [telefone, setTelefone] = useState()
+  const [endereco, setEndereco] = useState()
+  const [email, setEmail] = useState()
+  const [aceito, setAceito] = useState("false")
+  const [hobby, setHobby] = useState()
+
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
       <View style={styles.imagem}>
       <Image
         style={styles.image}
-        source={require ("../aplicativo1/assets/images/fotos-secretarios-masculino-1.jpg")}
+        source={require ("../AULA/assets/images/images.png")}
       />
       </View>
       <View style={styles.dados}>
@@ -21,47 +31,70 @@ export default function App() {
       
         <TextInput
         style={styles.input}
+        value={nome}
         placeholder="Digite Seu Nome"
-        keyboardType="numeric"
+        onChangeText={(text) => setNome(text)}
         />
 
         <TextInput
         style={styles.input}
+        value={telefone}
         placeholder="Digite Seu Telefone"
-        keyboardType="numeric"
+        onChangeText={(text) => setTelefone(text)}
         />
 
         <TextInput
         style={styles.input}
+        value={endereco}
         placeholder="Digite Seu Endereço"
-        keyboardType="numeric"
+        onChangeText={(text) => setEndereco(text)}
         />
 
         <TextInput
         style={styles.input}
+        value={email}
         placeholder="Digite Seu E-mail"
-        keyboardType="numeric"
+        onChangeText={(text) => setEmail(text)}
         />
 
         </View>
+
         <View style={styles.informacoes}>
-          <Text>Outras Informações</Text>
-          <Picker style={{height:50,widht:100}}>
-            <Picker.Item label="Programar"/>
+
+          <Text>Hobby</Text>
+
+          <Picker
+          selectValue={hobby}
+          style={{height:50,widht:100,margin:5}}
+          onValueChange={(itemValue, itemIndex) => setHobby(itemValue)}>
+            <Picker.Item label="Programar" value="programar"/>
+            <Picker.Item label="Correr" value="correr"/>
+            <Picker.Item label="Dormir" value="dormir"/>
           </Picker>
-          <Text style={{alignSelf:"center"}}>Aceita os termos de Serviço</Text>
+
+          <View style={{
+            flexDirection:'row',
+            margin: 5,
+            height: 30,
+            alignItems:'center'
+          }}>
+
           <CheckBox
-          style={{alignSelf:"auto"}}
+          value={aceito}
+          onValueChange={() => setAceito(!aceito)}
+          style={{margin:5}}
           />
+            <Text>Aceita os termos de Serviço</Text>
+          </View>
         </View>
 
         <View style={styles.textos}>
-          <Text>Nome:</Text>
-          <Text>Telefone:</Text>
-          <Text>Endereço:</Text>
-          <Text>Email:</Text>
-          <Text>Hobby:</Text>
-          <Text>Aceito:</Text>
+          <Text>Nome:{nome}</Text>
+          <Text>Telefone:{telefone}</Text>
+          <Text>Endereço:{endereco}</Text>
+          <Text>Email:{email}</Text>
+          <Text>Hobby:{hobby}</Text>
+          <Text>Aceitou termos?:{aceito ? "Sim" : "Não"}</Text>
         </View>
 
     </View>
@@ -76,14 +109,18 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    marginBotton: 15,
+    borderWidth:1,
   },
   input:{
-    width:200,
-    height:50,
+    padding:5,
+    margin:2,
+    borderRadius:10,
+    width:"100%",
+    height:"100%",
     borderWidth: 0.5,
   },
   dados:{
+    margin:10,
     borderRadius: 15,
     borderWidth:2,
     width:300,
@@ -91,13 +128,15 @@ const styles = StyleSheet.create({
     padding: 15,
   },
   informacoes:{
+    margin:20,
     borderRadius: 15,
     padding:15,
     borderWidth: 2,
     width:300,
-    height:100,
+    height:140,
   },
   textos:{
+    margin:20,
     borderRadius: 15,
     padding:15,
     borderWidth: 2,
@@ -105,14 +144,13 @@ const styles = StyleSheet.create({
     height:150,
   },
   imagem:{
-    width:200,
-    height:50,
+    padding: 10,
     justifyContent:"center",
     alignItems:"center",
   },
   image:{
-    width:100,
-    height:100,
+    width:150,
+    height:150,
     borderRadius:50,
   },
 });
