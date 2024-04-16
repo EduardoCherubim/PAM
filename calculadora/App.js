@@ -12,7 +12,7 @@ export default function App() {
 
   const Calcular = () => {
     if(sinal=="+"){
-      setResultado(valor1 + valor2);
+      setResultado(parseFloat(valor1) + parseFloat(valor2));
     }  
     else if(sinal=="-"){
       setResultado(valor1 - valor2);
@@ -32,13 +32,13 @@ export default function App() {
        <TextInput
         style={styles.input}
         value={valor1}
-        Placeholder="Entre com o primeiro número"
+        placeholder="primeiro número"
         onChangeText={(Number) => setValor1(Number)}
         />
         <TextInput
         style={styles.input}
         value={valor2}
-        Placeholder="Entre com o segundo número"
+        placeholder="segundo número"
         onChangeText={(Number) => setValor2(Number)}
         />
       </View>
@@ -60,7 +60,7 @@ export default function App() {
         onPress={() => Calcular()} />
 
         <Text
-        style={{margin:30}}
+        style={{margin:30,color:"white",fontSize:30}}
         >
         {resultado}</Text>
       </View>
@@ -72,17 +72,18 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#E18DBD',
     alignItems: 'center',
     justifyContent: 'center',
   },
   input:{
+    justifyContent:'center',
+    color:"white",
     margin:10,
-    width: 300,
     height: 50,
     borderWidth: 1,
     borderRadius:20,
-    backgroundColor: "#A4A4A4",
+    backgroundColor: "#B48FE3",
     fontSize:25,
     justifyContent:"center",
   },
