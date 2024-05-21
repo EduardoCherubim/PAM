@@ -21,24 +21,6 @@ const frases = [
 
 ];
 
-  return (
-    <View style={styles.container}>
-      {exibirimagem(img)}
-      <Text style={styles.textofrase}>{impressao}</Text>
-      <TouchableOpacity style={style.botao} onPress={()=>quebrar()}>
-      <View style={styles.btnArea}>
-      <Text style={styles.btnTexto}>Quebrar Biscoito</Text>
-      </View>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.botao} onPress={()=>novo()}>
-      <View style={styles.btnArea}>
-        <Text style={styles.btnTexto}>Novo Biscoito</Text>
-      </View>
-      </TouchableOpacity>
-    </View>
-  );
-}
-
 function quebrar(){
 if(img == 0){
   let numAleatorio = Math.floor(Math.random() * frases.length);
@@ -60,6 +42,24 @@ if(numero==0){
 }
 }
 
+
+  return (
+    <View style={styles.container}>
+      {exibirimagem(img)}
+      <Text style={styles.textofrase}>{impressao}</Text>
+      <TouchableOpacity style={style.botao} onPress={()=>quebrar()}>
+      <View style={styles.btnArea}>
+      <Text style={styles.btnTexto}>Quebrar Biscoito</Text>
+      </View>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.botao} onPress={()=>novo()}>
+      <View style={styles.btnArea}>
+        <Text style={styles.btnTexto}>Novo Biscoito</Text>
+      </View>
+      </TouchableOpacity>
+    </View>
+  );
+}
 
 const styles = StyleSheet.create({
   container: {
