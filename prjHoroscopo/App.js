@@ -10,17 +10,46 @@ const [horoscopo,setHoroscopo] = useState([
   caracteristicas:'independencia, ação, coragem, pioneirismo, liderança, fraqueza, auto-afirmativo',
   elemento:'fogo',
   cores:'branco e prata'},
-  {nome:'touro',
-  dias:'21/04 a 20/05',
-  imagem:'require(./asstes/images/touro.jpg)',
-  leitura:'O dia pode trazer desentenimentos'}
+{nome:'Touro',
+dias: '21/04 a 20/05',
+Imagem: 'touro, jpe',
+Leitura: 'O dia pode trazer desentendimentos se você não tiver uma boa porção de desapego',
+caracteristicas: 'Independência, ação, coragem, pioneirismo, liderança, franqueza',
+elemento: 'Fogo',
+cores: 'branco e prata'
+}.
 ])
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <View style-(styles.container)>
+
+<Button title="Aries" onPress={() => carregar (0)}/>
+
+<Button title="Touro" onPress-(() => carregar (1)}/>
+
+<Modal visible (visivel) animationType "fade">
+
+<View>
+
+<Text>{horoscopo[8].nome]</Text>
+
+<Text>{horoscopo[0].dias]</Text>
+
+<Text>{horoscopo[0].Leitura}</Text>
+
+<Text>(horoscopo[0].imagem)]</Text>
+
+<Button title="Voltar" onPress-(() => voltar()}/>
+
+<Image source={url} style={styles.img}/>
+
+</View>
+
+</Modal>
+
+<StatusBar style="auto" />
+
+</View>
   );
 }
 
