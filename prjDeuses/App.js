@@ -9,39 +9,99 @@ export default function App() {
 const [deus,setDeus] = useState([
   {nome:'Zeus',
   ocupação:'deus dos deuses',
+  LocalCulto:'Olímpia',
+  Morada:'Monte Olimpo',
+  Clã:'Olimpianos',
+  Cônjuge:'Hera',
+  Romano:'Júpiter'
   },
   {nome:'Poseidon', 
   ocupação:'deus dos mares',
+  LocalCulto:'Pilos',
+  Morada:'Mar',
+  Clã:'Olimpianos',
+  Cônjuge:'Anifrite',
+  Romano:'Netuno'
   },
   {nome:'Atena',
   ocupação:'deusa da saedoria',
+  LocalCulto:'Atenas',
+  Morada:'Monte Olimpo',
+  Clã:'Olimpianos',
+  Cônjuge:'Não teve',
+  Romano:Minerva''
   },
   {nome:'Ares',
   ocupação:'deus da guerra',
+   LocalCulto:'Tessália',
+  Morada:'Monte Olimpo',
+  Clã:'Olimpianos',
+  Cônjuge:'Não teve',
+  Romano:'Marte'
   },
   {nome:'Ártemis',
   ocupação:'deusa da caça',
+   LocalCulto:'Delos',
+  Morada:'Monte Olimpo',
+  Clã:'Olimpianos',
+  Cônjuge:'Não teve',
+  Romano:'Diana'
   },
   {nome:'Hermes',
   ocupação:'deus das comunicações e das viagens',
+   LocalCulto:'',
+  Morada:'Monte Olimpo',
+  Clã:'Olimpianos',
+  Cônjuge:'Não teve',
+  Romano:'Mercúrio'
   },
   {nome:'Hera',
   ocupação:'deusa dos céu,maternidade e matrimônio',
+   LocalCulto:'Olímpia',
+  Morada:'Monte Olimpo',
+  Clã:'Olimpianos',
+  Cônjuge:'Zeus',
+  Romano:'Juno'
   },
   {nome:'Deméter',
   ocupação:'deus da terra fértil',
+   LocalCulto:'Festival mistérios de Elêusis',
+  Morada:'Monte Olimpo',
+  Clã:'Olimpianos',
+  Cônjuge:'Não teve',
+  Romano:Ceres''
   },
   {nome:'Hefesto',
   ocupação:'deus dos ferreiros',
+   LocalCulto:'Lemnos',
+  Morada:'Monte Olimpo',
+  Clã:'Olimpianos',
+  Cônjuge:'Afrodite',
+  Romano:'Vulcano'
   },
   {nome:'Apolo',
   ocupação:'deus do Sol',
+   LocalCulto:'Delfos',
+  Morada:'Monte Olimpo',
+  Clã:'Olimpianos',
+  Cônjuge:'Não teve',
+  Romano:'Febo'
   },
   {nome:'Dionísio',
   ocupação:'deus da festa, do vinho e do prazer',
+   LocalCulto:'Atenas',
+  Morada:'Monte Olimpo',
+  Clã:'Olimpianos',
+  Cônjuge:'Ariadne',
+  Romano:'Baco'
   },
   {nome:'Afrodite',
   ocupação:'deusa da beleza e do amor',
+   LocalCulto:'Citera',
+  Morada:'Monte Olimpo',
+  Clã:'Olimpianos',
+  Cônjuge:'Hefesto',
+  Romano:'Vênus'
   },
   ])
 
@@ -76,12 +136,12 @@ const [deus,setDeus] = useState([
       <Modal visible={visivel} animationType="fade">
         <View>
           <Text>{deus[indiceSelecionado].nome}</Text>
-          <Text>{deus[indiceSelecionado].nome}</Text>
-          <Text>{deus[indiceSelecionado].nome}</Text>
-          <Text>{deus[indiceSelecionado].nome}</Text>
-          <Text>{deus[indiceSelecionado].nome}</Text>
-          <Text>{deus[indiceSelecionado].nome}</Text>
-          <Text>{deus[indiceSelecionado].nome}</Text>
+          <Text>{deus[indiceSelecionado].ocupação}</Text>
+          <Text>{deus[indiceSelecionado].LocalCulto}</Text>
+          <Text>{deus[indiceSelecionado].Morada}</Text>
+          <Text>{deus[indiceSelecionado].Clã}</Text>
+          <Text>{deus[indiceSelecionado].Cônjuge}</Text>
+          <Text>{deus[indiceSelecionado].Romano}</Text>
           <Button title="Voltar" onPress={() => voltar()}/>
         </View>
       </Modal>
