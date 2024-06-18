@@ -1,5 +1,6 @@
+
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Modal, ScrollView } from 'react-native-web';
 import { Button,Image } from 'react-native-web';
 import { useState } from 'react';
@@ -117,47 +118,118 @@ const [deus,setDeus] = useState([
   };
 
   return (
-    <View style={(styles.container)}>
+    <View style={(styles.container)} >
       <ScrollView>
       <StatusBar style="auto" />
       <View style={styles.botao}>
-      <Button style={(styles.btn)} title="Zeus" onPress={() => carregar (0)}/>
+        <TouchableOpacity onPress={() => carregar (0)}>
+          <Image
+            style={{width:200, height:200}}
+            source={{uri:"https://wallpapersmug.com/download/800x600/39e9ad/zeus-god-of-thunder-video-game.jpg"}}
+          />
+          <Text style={styles.nome}>Zeus</Text>
+        </TouchableOpacity>
       </View>
       <View style={styles.botao}>
-      <Button style={(styles.btn)} title="Poseidon" onPress={() => carregar (1)}/>
+      <TouchableOpacity onPress={() => carregar (1)}>
+          <Image
+            style={{width:200, height:200}}
+            source={{uri:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlfeR0RTXZGXnpnoh5177MffebbF7njQQPyg&s"}}
+          />
+          <Text style={styles.nome}>Poseidon</Text>
+        </TouchableOpacity>
       </View>
       <View style={styles.botao}>
-      <Button style={(styles.btn)} title="Atena" onPress={() => carregar (2)}/>
+      <TouchableOpacity onPress={() => carregar (2)}>
+          <Image
+            style={{width:200, height:200}}
+            source={{uri:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVemWVZCZQJxUPDJvnpQUpwnybhWsQuLTNlg&s"}}
+          />
+          <Text style={styles.nome}>Atena</Text>
+        </TouchableOpacity>
       </View>
       <View style={styles.botao}>
-      <Button style={(styles.btn)} title="Ares" onPress={() => carregar (3)}/>
+      <TouchableOpacity onPress={() => carregar (3)}>
+          <Image
+            style={{width:200, height:200}}
+            source={{uri:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoZ8pk9ANTLWof8lw56Vqu3LUXyf7r9ROelg&s"}}
+          />
+          <Text style={styles.nome}>Ares</Text>
+        </TouchableOpacity>
       </View>
       <View style={styles.botao}>
-      <Button style={(styles.btn)} title="Ártemis" onPress={() => carregar (4)}/>
+      <TouchableOpacity onPress={() => carregar (4)}>
+          <Image
+            style={{width:200, height:200}}
+            source={{uri:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN4BaZRNW_AYpH9yrRomfEEmx7YKCckw-Siw&s "}}
+          />
+          <Text style={styles.nome}>Ártemis</Text>
+        </TouchableOpacity>
       </View>
       <View style={styles.botao}>
-      <Button style={(styles.btn)} title="Hermes" onPress={() => carregar (5)}/>
+      <TouchableOpacity onPress={() => carregar (5)}>
+          <Image
+            style={{width:200, height:200}}
+            source={{uri:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV7Ufb_v1PE-G2UKis4MWHM0cQu28NiK8uww&s"}}
+          />
+          <Text style={styles.nome}>Hermes</Text>
+        </TouchableOpacity>
       </View>
       <View style={styles.botao}>
-      <Button style={(styles.btn)} title="Hera" onPress={() => carregar (6)}/>
+      <TouchableOpacity onPress={() => carregar (6)}>
+          <Image
+            style={{width:200, height:200}}
+            source={{uri:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9_qI_5WOdWRYLCq28eklqaL0gK64mV3blwQ&s"}}
+          />
+          <Text style={styles.nome}>Hera</Text>
+        </TouchableOpacity>
       </View>
       <View style={styles.botao}>
-      <Button style={(styles.btn)} title="Deméter" onPress={() => carregar (7)}/>
+      <TouchableOpacity onPress={() => carregar (7)}>
+          <Image
+            style={{width:200, height:200}}
+            source={{uri:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuW1yVeSkR6cLFrwRa0wrm8uWXK2kfz2IF0w&s"}}
+          />
+          <Text style={styles.nome}>Deméter</Text>
+        </TouchableOpacity>
       </View>
       <View style={styles.botao}>
-      <Button style={(styles.btn)} title="Hefesto" onPress={() => carregar (8)}/>
+      <TouchableOpacity onPress={() => carregar (8)}>
+          <Image
+            style={{width:200, height:200}}
+            source={{uri:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtFJSCkS7nziy10HkH8OGcCUWkTcsnPzj90w&s"}}
+          />
+          <Text style={styles.nome}>Hefesto</Text>
+        </TouchableOpacity>
       </View>
       <View style={styles.botao}>
-      <Button style={(styles.btn)} title="Apolo" onPress={() => carregar (9)}/>
+      <TouchableOpacity onPress={() => carregar (9)}>
+          <Image
+            style={{width:200, height:200}}
+            source={{uri:"https://images.nightcafe.studio/jobs/Mp0PyP2iwpRfJ5409lFT/Mp0PyP2iwpRfJ5409lFT--1--s9ojr.jpg?tr=w-1600,c-at_max "}}
+          />
+          <Text style={styles.nome}>Apolo</Text>
+        </TouchableOpacity>
       </View>
       <View style={styles.botao}>
-      <Button style={(styles.btn)} title="Dionísio" onPress={() => carregar (10)}/>
+      <TouchableOpacity onPress={() => carregar (10)}>
+          <Image
+            style={{width:200, height:200}}
+            source={{uri:"https://t4.ftcdn.net/jpg/05/77/72/39/360_F_577723938_BjYYTi8fnlqCK18XYTtkbNgsgbfQIYgE.jpg"}}
+          />
+          <Text style={styles.nome}>Dionísio</Text>
+        </TouchableOpacity>
       </View>
       <View style={styles.botao}>
-      <Button style={(styles.btn)} title="Afrodite" onPress={() => carregar (11)}/>
-      </View>
+      <TouchableOpacity onPress={() => carregar (11)}>
+          <Image
+            style={{width:200, height:200}}
+            source={{uri:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4IEwekNjk-8QNkAw_tEVJC_3xx4G-raeZaA&s"}}
+          />
+          <Text style={styles.nome}>Afrodite</Text>
+        </TouchableOpacity>
 
-
+      </View>
       <Modal visible={visivel} animationType="fade">
         <View>
           <Text>{deus[indiceSelecionado.imagem]}</Text>
@@ -182,15 +254,21 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  btn:{
-    justifyContent:'space-between',
+    justifyContent:'center',
+    alignItens:'center'
   },
   botao:{
 justifyContent:'center',
-marginTop:40
+marginTop:40,
+alignItems:'center',
+alignContent:'center'
   },
+
+  nome:{
+    alignItems: 'center',
+    justifyContent:'center',
+    alignSelf:'center',
+    fontWeight:'bold'
+    }
 
 });
