@@ -7,44 +7,47 @@ export default function App() {
     <View style={styles.container}>
 
       <View style={styles.view}>
-        <Text style={{fontSize:45}}>Jokenpo</Text>
+        <Text style={{fontSize:65, fontFamily:"League Gothic"}}>Jokenpo</Text>
+      </View>
+
+      <View style={styles.viewP}>
+        <Text style={{fontSize:35, fontFamily:"League Gothic"}}>Placar</Text>
       </View>
 
       <View style={styles.view}>
-        <Text>Placar</Text>
+        <Text style={{paddingRight:200, fontSize:25, fontFamily:"League Gothic"}}>0</Text>
+        <Text style={{fontSize:25, fontFamily:"League Gothic"}}>0</Text>
       </View>
 
       <View style={styles.view}>
-        <Text style={{paddingRight:200}}>0</Text>
-        <Text>0</Text>
+        <Image style={{width:'200%',height:'95%'}}
+        source={{uri:"https://i.pinimg.com/originals/23/f9/19/23f919ecefe7c9113855bac4ac84916c.png"}}/>
+        <Text style={{margin:30, fontSize:20, fontFamily:"League Gothic"}}>VS</Text>
+        <Image style={{width:'200%',height:'95%'}} 
+        source={{uri:"https://i.pinimg.com/originals/23/f9/19/23f919ecefe7c9113855bac4ac84916c.png"}}/>
       </View>
 
       <View style={styles.view}>
-        <Image style={{width:150,height:150}}
-        source={{uri:"https://w7.pngwing.com/pngs/424/347/png-transparent-question-block-super-mario-icon-thumbnail.png"}}/>
-        <Text>VS</Text>
-        <Image style={{width:150,height:150}} 
-        source={{uri:"https://w7.pngwing.com/pngs/424/347/png-transparent-question-block-super-mario-icon-thumbnail.png"}}/>
-      </View>
+        <TouchableOpacity style={styles.botao}>
+          <View style={styles.btnArea}>
+            <Text style={{fontSize:40, fontFamily:"League Gothic", margin:'auto'}}>Nova Partida</Text>
+          </View>
 
-      <View style={styles.view}>
-        <Button style={styles.butao}
-        title="Nova Partida"
-        color="gray"/>
+        </TouchableOpacity>
       </View>
 
       <View style={styles.view}>
         <TouchableOpacity>
-          <Image style={{width:120, height:200}}
-          source={{uri:"https://www.playclick.com.br/jogo_jokenpo/img/pedra.png"}}/>
+          <Image style={{width:105, height:115, margin:25}}
+          source={{uri:"https://images.vexels.com/media/users/3/145827/isolated/preview/357f06ecbaaa77d750259c459c0ed55f-ilustracao-de-pedra-redonda.png"}}/>
         </TouchableOpacity>
         <TouchableOpacity>
-          <Image style={{width:100,height:200}}
-          source={{uri:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpEBk3izn0lexaAO-MHv9xzXYLITSr7G6ZaHo9D212yy9DuUBOkqRkwGUOZoL_SPbp4jM&usqp=CAU"}}/>
+          <Image style={{width:105,height:115, margin:25}}
+          source={{uri:"https://static.vecteezy.com/system/resources/thumbnails/022/219/336/small/white-torn-paper-isolated-on-a-transparent-background-png.png"}}/>
         </TouchableOpacity>
         <TouchableOpacity>
-          <Image style={{width:105,height:200}}
-          source={{uri:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYq3zekA2TVgoHVm4yHySKms7HHQePyGX4fjtctPs-N7n5Jy8KyBQHZVpd04WVp6wM3t4&usqp=CAU"}}/>
+          <Image style={{width:105,height:115, margin:25}}
+          source={{uri:"https://static.vecteezy.com/system/resources/previews/016/314/773/non_2x/scissors-transparent-scissors-free-png.png"}}/>
         </TouchableOpacity>
       </View>
       <StatusBar style="auto" />
@@ -55,12 +58,27 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#EDBE58',
     alignItems: 'center',
     justifyContent: 'center',
   },
   view:{
     flex:1,
+    alignItems:'center',
+    justifyContent:'center',
+    flexDirection:'row'
+  },
+  btnArea:{
+    backgroundColor:"#D98E04",
+    width:300,
+    height:60,
+    justifyContent:'center',
+    alignContent:'center',
+    borderRadius:50,
+    borderWidth:2
+  },
+  viewP:{
+    flex:0.2,
     alignItems:'center',
     justifyContent:'center',
     flexDirection:'row'
