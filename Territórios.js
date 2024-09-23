@@ -12,13 +12,13 @@ export default function App() {
       <View style={styles.territorioArea}>
         <View style={styles.buttonArea}>
             <Pressable style={styles.territorio}>
-              <Text>Conteúdo</Text>
+              <Text>Mamiferos</Text>
             </Pressable>
           </View>
 
         <View style={styles.buttonArea}>
           <Pressable style={styles.territorio}>
-          <Text>Conteúdo</Text>
+          <Text>Aves</Text>
           </Pressable>
         </View>
       </View>
@@ -26,13 +26,13 @@ export default function App() {
       <View style={styles.territorioArea}>
         <View style={styles.buttonArea}>
             <Pressable style={styles.territorio}>
-            <Text>Conteúdo</Text>
+            <Text>Répteis</Text>
             </Pressable>
           </View>
           
         <View style={styles.buttonArea}>
           <Pressable style={styles.territorio}>
-          <Text>Conteúdo</Text>
+          <Text>Anfibios</Text>
           </Pressable>
         </View>
       </View>
@@ -40,13 +40,13 @@ export default function App() {
       <View style={styles.territorioArea}>
         <View style={styles.buttonArea}>
             <Pressable style={styles.territorio}>
-            <Text>Conteúdo</Text>
+            <Text>Peixes</Text>
             </Pressable>
           </View>
           
         <View style={styles.buttonArea}>
           <Pressable style={styles.territorio}>
-          <Text>Conteúdo</Text>
+          <Text>Outros</Text>
           </Pressable>
         </View>
       </View>
